@@ -6,13 +6,14 @@
   "scripts": {
     "test": "mocha --compilers js:mocha-traceur db/postGIS/specs/"
   },
-  "author": "",
+  "author": "Richard Artoul, David Goldberg, Chris Rhoton",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^2.9.34",
     "express": "^4.13.3",
     "knex": "^0.8.6",
     "mocha": "^2.2.5",
+    "mongodb": "^2.0.42",
     "pg": "^4.4.1",
     "should": "^7.1.0"
   },
