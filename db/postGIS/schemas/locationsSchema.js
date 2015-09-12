@@ -6,6 +6,7 @@ var createLocationsTable = Promise.coroutine(function*() {
   if (!exists) {
     yield db.schema.createTable('locations', function(table) {
       table.increments();
+      table.string('glyphid');
       table.string('name');
       table.string('address');  
       table.text('description');

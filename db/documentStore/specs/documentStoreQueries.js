@@ -8,6 +8,12 @@ var db = require('../db');
 var testData = {'name': 'test'};
 
 describe('documentStore queries()', function() {
+  after(function(done) {
+    db.glyphData.remove({}).then(function() {
+      done();
+    });
+  });
+
   it('should insert data into the document store', function(done) {
     var testInsertData = Promise.coroutine(function*() {
       var insertResult = yield insertQuery(testData)

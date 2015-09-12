@@ -4,7 +4,7 @@
   "description": "Location Microservice",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --compilers js:mocha-traceur db/postGIS/specs/ db/documentStore/specs/"
+    "test": "mocha --compilers js:mocha-traceur db/postGIS/specs/ db/documentStore/specs/ app/specs/"
   },
   "author": "Richard Artoul, David Goldberg, Chris Rhoton",
   "license": "ISC",
