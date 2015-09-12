@@ -1,0 +1,5 @@
+exports.client = 'postgres';
+exports.hostIP = '127.0.0.1';
+exports.user = 'GIVE ME A USERNAME';
+exports.password = 'GIVE ME A PASSWORD';
+exports.database = 'GIVE ME A DATABASE NAME';
