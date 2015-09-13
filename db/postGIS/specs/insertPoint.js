@@ -2,14 +2,18 @@ var insertPoint = require('../queries/insertPoint');
 var Promise = require('bluebird');
 var should = require('should');
 var GIS = require('../db');
-var deleteTable = require('./utils/deleteTable');
+var wipeGIS = require('../utils/wipeGIS');
 
 describe('postGIS Queries', function() {
   before(function(done) {
-    deleteTable('locations', done);
+    wipeGIS('locations').then(function(){
+      done();
+    });
   });
   after(function(done) {
-    deleteTable('locations', done);
+    wipeGIS('locations').then(function(){
+      done();
+    });
   });
   describe('insertPoint()', function() {
     it('should insert a point into the database, along with any provided data', function(done) {

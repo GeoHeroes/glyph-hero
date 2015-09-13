@@ -4,9 +4,16 @@ var createGlyph = require('../createGlyph');
 var GIS = require('../../db/postGIS/db');
 var docStore = require('../../db/documentStore/db');
 var ObjectID = require('mongodb').ObjectID;
+var dbUtils = require('../../db/dbUtils');
 
 describe('app logic', function() {
   describe('createGlyph()', function() {
+    after(function(done) {
+      dbUtils.wipeGISAndDocumentStore().then(function() {
+        done();
+      });
+    });
+
     it('should create a new glyph with its coordinates and data', function(done) {
       var createGlyphTest = Promise.coroutine(function*() {
         // createGlyph returns the documentid of the created glyph
