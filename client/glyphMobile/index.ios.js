@@ -6,27 +6,18 @@
 
 var React = require('react-native');
 var {
+  MapView,
   AppRegistry,
   StyleSheet,
   Text,
-  View,
+  View
 } = React;
 
 var glyphMobile = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <MapView style={styles.map}>
+      </MapView>
     );
   }
 });
@@ -47,6 +38,10 @@ var styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  map: {
+    height: 500,
+    top: 40,
   },
 });
 
