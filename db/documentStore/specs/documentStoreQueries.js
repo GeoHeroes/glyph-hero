@@ -25,9 +25,11 @@ describe('documentStore queries()', function() {
 
   it('should fetch data from the document store', function(done) {
     var testFetchData = Promise.coroutine(function*() {
+
       var testID1 = yield insertQuery({'name': 'test1'});
       var testID2 = yield insertQuery({'name': 'test2'});
       var testID3 = yield insertQuery({'name': 'test3'});
+      
       var testIDsArray = [testID1, testID2, testID3];
 
       var fetchResult = yield fetchQuery(testIDsArray)
