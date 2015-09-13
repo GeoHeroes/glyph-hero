@@ -8,6 +8,9 @@ var createLocationsTable = Promise.coroutine(function*() {
       table.increments();
       table.string('glyphid');
       table.string('name');
+      // 9 significant digits, 6 decimal places - standard for lat/long
+      table.decimal('latitude', 9, 6);
+      table.decimal('longitude', 9, 6);
       table.string('address');  
       table.text('description');
       table.timestamps();

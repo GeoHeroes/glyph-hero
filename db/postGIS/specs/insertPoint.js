@@ -19,6 +19,8 @@ describe('postGIS Queries', function() {
         insertResult.rowCount.should.equal(1);
         var queryResult = yield GIS.select('*').from('locations').where({name: 'Falafel House'});
         queryResult.length.should.equal(1);
+        queryResult[0].latitude.should.equal("25.000000");
+        queryResult[0].longitude.should.equal("25.000000");
         queryResult[0].name.should.equal('Falafel House');
         queryResult[0].geo.should.equal('010100000000000000000039400000000000003940');
         done();
