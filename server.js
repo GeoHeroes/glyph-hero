@@ -5,16 +5,13 @@ var GIS = require('./db/postGIS/db');
 var server = express();
 var docStore = require('./db/documentStore/db');
 var bodyParser = require('body-parser');
-
-var createGlyphRoute = require('./routeHandlers/createGlyphRoute');
-var findGlyphsRadiusRoute = require('./routeHandlers/findGlyphsRadiusRoute');
+var addRoutes = require('./routing');
 
 var port = config.port;
 
 server.use(bodyParser.json());
 
-server.post('/api/createGlyph', createGlyphRoute);
-server.post('/api/findGlyphsRadius', findGlyphsRadiusRoute);
+addRoutes(server);
 
 //error handling middleware applied last
 server.use(errorHandler);
