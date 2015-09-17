@@ -41,3 +41,31 @@ The MongoDB server is actually just a normal EC2 instance (like the web server),
 1. Execute `aws/connect-mongo-server.sh` to create a secure connection to the MongoDB server
 2. Execute `sudo mongod` or `sudo mongod service start` to start the MongoDB daemon if its not already running.
 3. When you're done, terminate the connection by executing git.
+
+## Temp Route Documentation
+
+### Create Glyph
+
+'/api/createglyph' - POST
+
+{
+  "latitude": 25,
+  "longitude": 25,
+  "data": {
+    //any valid json
+  }
+}
+
+Returns JSON with two properties: success and glyphID
+
+### Find Glyphs in Radius
+
+'/api/findglyphsradius' - POST
+
+{
+  "latitude": 25,
+  "longitude": 25,
+  "radius": 1
+}
+
+Returns JSON with two properties: success and glyphs (array of glyphs with their data and an _id property)
