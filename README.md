@@ -44,6 +44,8 @@ The MongoDB server is actually just a normal EC2 instance (like the web server),
 
 ## Temp Route Documentation
 
+As of now, application is deployed at: ec2-52-11-76-55.us-west-2.compute.amazonaws.com
+
 ### Create Glyph
 
 '/api/createglyph' - POST
