@@ -17,6 +17,8 @@ Your server should be up and running! Refer to [INSERT API DOCUMENTATION HERE] f
 
 All the following commands should be run from the root directory as the bash scripts include relative paths. In addition, many of the SSH connections will require the AWS private key. You will need to obtain the private key and store it in the aws folder for the commands to work.
 
+Once you've copied the private key into the aws folder, execute 'chmod 600 <NAME OF PRIVATEKEY>' otherwise it won't work.
+
 **Note:** If you get any permissions errors when trying to execute a bash script, execute `chmod +x path/to/script.sh` to give the script execution permissions.
 
 ### Connecting to the web server and redeploying
