@@ -6,10 +6,12 @@ var server = express();
 var docStore = require('./db/documentStore/db');
 var bodyParser = require('body-parser');
 var addRoutes = require('./routing');
+var cors = require('cors');
 
 var port = config.port;
 
 server.use(bodyParser.json());
+server.use(cors());
 
 addRoutes(server);
 
