@@ -23,18 +23,18 @@ describe('app logic', function() {
         var testIDsArray = [testID1, testID2, testID3];
         
         var glyphsData = yield findGlyphsRadius(25, 25, 1);
-        glyphsData[0].name.should.equal('test1');
-        glyphsData[0]._id.should.equal(testID1);
-        glyphsData[1].name.should.equal('test2');
-        glyphsData[1]._id.should.equal(testID2);
+        glyphsData[0].data.name.should.equal('test1');
+        glyphsData[0].id.should.equal(testID1);
+        glyphsData[1].data.name.should.equal('test2');
+        glyphsData[1].id.should.equal(testID2);
 
         var glyphsData = yield findGlyphsRadius(25, 25, 200);
-        glyphsData[0].name.should.equal('test1');
-        glyphsData[0]._id.should.equal(testID1);
-        glyphsData[1].name.should.equal('test2');
-        glyphsData[1]._id.should.equal(testID2);
-        glyphsData[2].name.should.equal('test3');
-        glyphsData[2]._id.should.equal(testID3);
+        glyphsData[0].data.name.should.equal('test1');
+        glyphsData[0].id.should.equal(testID1);
+        glyphsData[1].data.name.should.equal('test2');
+        glyphsData[1].id.should.equal(testID2);
+        glyphsData[2].data.name.should.equal('test3');
+        glyphsData[2].id.should.equal(testID3);
 
         done();
       });
