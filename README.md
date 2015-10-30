@@ -50,7 +50,9 @@ As of now, application is deployed at: ec2-52-11-76-55.us-west-2.compute.amazona
 
 ### Create Glyph
 
-'/api/createglyph' - POST
+Request Type: POST
+
+'/api/createglyph'
 
 {
   "latitude": 25,
@@ -64,7 +66,9 @@ Returns JSON with two properties: success and glyphID
 
 ### Find Glyphs in Radius
 
-'/api/findglyphsradius' - POST
+Request Type: POST
+
+'/api/findglyphsradius'
 
 {
   "latitude": 25,
