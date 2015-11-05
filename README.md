@@ -11,7 +11,7 @@ Glyph Engine is a deployable service for tying data to locations. It can be used
 5. Specify a port for the server to listen on in the config.js file in the root folder.
 6. Run `node server.js`
 
-Your server should be up and running! Refer to [INSERT API DOCUMENTATION HERE] for guidance on how to use the API
+Your server should be up and running! See API documentation for guidance on how to use the API
 
 ## Managing AWS Scripts
 
